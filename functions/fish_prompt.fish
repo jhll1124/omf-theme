@@ -95,5 +95,5 @@ function fish_prompt
   ##
   ## Rest of the prompt
   ##
-  echo -n '─'$white$__fish_prompt_char $normal
+  echo -n '─'$hostcolor$__fish_prompt_char $normal
 end
