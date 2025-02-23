@@ -49,7 +49,6 @@ function fish_prompt
   ##
   ## Line 2
   ##
-  echo -n '    '
   echo -n $hostcolor'╰'
 
   # Disable virtualenv's default prompt
