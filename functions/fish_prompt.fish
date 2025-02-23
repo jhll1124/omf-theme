@@ -11,7 +11,7 @@ function fish_prompt
       case 0
         set -g __fish_prompt_char '#'
       case '*'
-        set -g __fish_prompt_char 'λ'
+        set -g __fish_prompt_char '>'
     end
   end
 
@@ -42,13 +42,14 @@ function fish_prompt
   ##
   ## Line 1
   ##
-  echo -n $hostcolor'╭─'$hotpink$current_user$white' at '$orange$__fish_prompt_hostname$white' in '$limegreen(pwd|sed "s=$HOME=⌁=")$turquoise
+  echo -n $hostcolor'╭─'$hotpink$current_user$white'@'$orange$__fish_prompt_hostname$white' in '$limegreen(pwd|sed "s=$HOME=~=")$turquoise
   __fish_git_prompt " (%s)"
   echo
 
   ##
   ## Line 2
   ##
+  echo -n '    '
   echo -n $hostcolor'╰'
 
   # Disable virtualenv's default prompt
@@ -96,4 +97,3 @@ function fish_prompt
   ##
   echo -n $hostcolor'─'$white$__fish_prompt_char $normal
 end
-
