@@ -63,34 +63,34 @@ function fish_prompt
   ##
   ## Support for vi mode
   ##
-  set -l lambdaViMode "$THEME_LAMBDA_VI_MODE"
+  # set -l lambdaViMode "$THEME_LAMBDA_VI_MODE"
 
   # Do nothing if not in vi mode
-  if test "$fish_key_bindings" = fish_vi_key_bindings
-      or test "$fish_key_bindings" = fish_hybrid_key_bindings
-    if test -z (string match -ri '^no|false|0$' $lambdaViMode)
-      set_color --bold
-      echo -n $white'─['
-      switch $fish_bind_mode
-        case default
-          set_color red
-          echo -n 'n'
-        case insert
-          set_color green
-          echo -n 'i'
-        case replace_one
-          set_color green
-          echo -n 'r'
-        case replace
-          set_color cyan
-          echo -n 'r'
-        case visual
-          set_color magenta
-          echo -n 'v'
-      end
-      echo -n $white']'
-    end
-  end
+  # if test "$fish_key_bindings" = fish_vi_key_bindings
+  #     or test "$fish_key_bindings" = fish_hybrid_key_bindings
+  #   if test -z (string match -ri '^no|false|0$' $lambdaViMode)
+  #     set_color --bold
+  #     #echo -n $white'─['
+  #     switch $fish_bind_mode
+  #       case default
+  #         set_color red
+  #         echo -n 'n'
+  #       case insert
+  #         set_color green
+  #         echo -n 'i'
+  #       case replace_one
+  #         set_color green
+  #         echo -n 'r'
+  #       case replace
+  #         set_color cyan
+  #         echo -n 'r'
+  #       case visual
+  #         set_color magenta
+  #         echo -n 'v'
+  #     end
+  #     echo -n $white']'
+  #   end
+  # end
 
   ##
   ## Rest of the prompt
